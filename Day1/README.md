@@ -30,6 +30,7 @@ mysql -u root -p
 
 #### Install mysql db connector
 ```
+sudo apt install -y libmysqlclient-dev
 sudo apt install -y libmysqlcppconn-dev
 ```
 
