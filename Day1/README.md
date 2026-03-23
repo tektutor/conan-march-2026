@@ -27,3 +27,36 @@ Hands-on Lab exercises
   - Supporting Debug and Release Build Types 
 </pre>
 
+## Info - CMake Overview
+<pre>
+- CMake is a build system generator
+- it is not really a build tool, it depends on other build tools like Make, Ninja, MSBuild, etc.,
+- in other words, it is a meta-build system
+- is a Transpiler for Build Systems
+- it takes CMakeLists.txt as input and transpiles it into a massive graph of dependencies and build rules
+- it is opensource and a cross-platform meta-build system
+- all our build instructions we will be writing in the CMakeLists.txt
+- CMake reads the CMakeLists.txt and checks your system for compilers and your application dependencies
+- it is a target based system
+- it follows 3 stage workflow
+  1. Configuration
+     - Reads CMakeLists.txt, builds a dependency graph, caches system variables in CMakeCache.txt
+  2. Generation
+     - Produces the native build files for the chosen "Generator"
+       e.g Makefile, Ninja, Visual Studio Solution file, etc.,
+  3. Build
+     - Invokes the underlying build tool to compile the source code into binaries
+- Advantages
+  - Out of source builds
+   - By building in a separate /build directory, the source tree remains clean
+   - no *.o, obj files will not clutter your code as intermediate files and binaries files will be generated in a separate folder
+     typically build folder
+   - independent of compiler
+     - it can switch between GCC, Clang, MSVC without changing  a single line of project code
+   - Extensibility
+     - Features like FetchContent allows CMake to automatically download and integrate external Git Repositories during the 
+       configuration phase
+</pre>
+
+
+
