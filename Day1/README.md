@@ -23,6 +23,6 @@ Hands-on Lab exercises
 - Develop a simple C++ application that depends on third-party library
   - We will be using Conan and CMake in this example
   - Understand Conanfile.txt recipe
-  - Supports Debug and Release Build Types 
+  - Supporting Debug and Release Build Types 
 </pre>
 
