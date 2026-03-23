@@ -1,51 +1,27 @@
 # Day 1
 
-## Conan Overview
+## Today's agenda
 <pre>
-- this is a package manager for C/C++ projects
-- it is an opensource tool
-- it works pretty much on any OS ( Windows, Mac OS-X, Linux distros )
-- just like package manager is Linux distros 
-- package manager is used
-  - to install/uninstall/upgrade software tools
-  - NodeJS
-    - npm 
-- example
-  - Ubuntu - apt/apt-get as the package manager
-</pre>
+- CMake Overview
+  
+- Introduction to Conan
+  - What is Conan?
+  - Why use a package manager for C/C++ applications?
+  - Comparision with vcpkg, hunter and system-level package managers
+  - Conan 1.x vs Conan 2.x
+  
+- Setup up the environment
+  - Installing  Conan v2.x
 
-## Lab - Develop a simple C++ application that pulls information from a mysql database
+- CMake High-Level Architecture
+- Conan High-Level Architecture
 
-#### Install MySQl DB Server
-```
-sudo apt update && sudo apt install -y mysql-server
-
-sudo systemctl enable mysql
-sudo systemctl start mysql
-sudo systemctl status mysql
-
-# Let's connect to mysql server using the below mysql client
-mysql -u root -p
-```
-
-#### Install mysql db connector
-```
-sudo apt install -y libmysqlclient-dev
-sudo apt install -y libmysqlcppconn-dev
-```
-
-#### Let's setup our project directory structure
-```
-cd ~
-mkdir -p mysql-cpp-demo/src
-touch CMakeLists.txt
-touch src/main.cpp
-```  
-
-## Lab - Install Conan Package Manager ( You dont' have to install this now )
-``` 
-sudo pip install conan
-```
+Hands-on Lab exercises
+- Develop a C++ application with CMake
+- Develop a C++ application with static library with CMake
+- Develop a C++ application with dynamic library with CMake
+- Develop a simple application that depends on third-party library
+</pre> 
 
 
 
