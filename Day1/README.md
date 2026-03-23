@@ -148,3 +148,36 @@ Hands-on Lab exercises
 
 ## Info - Conan High-Level Architecture
 ![conan](Conan-HighLevel-Architecture.png)
+
+## Info - Installing Conan 
+```
+pip install conan
+```
+
+## Lab - Hello World C++ projec with CMake
+```
+cd ~/conan-march-2026
+cd Day1/
+mkdir -p hello/{src,inc}
+touch src/main.cpp src/hello.cpp inc/hello.h
+touch CMakeLists.txt
+tree
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/bc0e49d5-8a8e-42fc-ba02-816f6f7d1173" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c5c7c929-7419-43a6-b670-4632db4e707b" />
+
+
+Build and run the application using cmake
+```
+cd ~/conan-march-2026
+git pull
+Day1/hello
+
+mkdir build && cd build
+cmake ..
+cmake --build .
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/93ad5bd5-e229-4a6c-acda-2535bf7a8c9f" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5d596b67-4996-446d-8e57-93285fb82b78" />
