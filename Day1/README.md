@@ -1,4 +1,4 @@
-# Day 1
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c21a6309-02b2-45ee-aa59-cfd0c4737c9b" /># Day 1
 
 ## Today's agenda
 <pre>
@@ -148,3 +148,96 @@ Hands-on Lab exercises
 
 ## Info - Conan High-Level Architecture
 ![conan](Conan-HighLevel-Architecture.png)
+
+## Info - Installing Conan 
+```
+pip install conan
+```
+
+## Lab - Hello World C++ projec with CMake
+```
+cd ~/conan-march-2026
+cd Day1/
+mkdir -p hello/{src,inc}
+touch src/main.cpp src/hello.cpp inc/hello.h
+touch CMakeLists.txt
+tree
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/bc0e49d5-8a8e-42fc-ba02-816f6f7d1173" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c5c7c929-7419-43a6-b670-4632db4e707b" />
+
+
+Build and run the application using cmake
+```
+cd ~/conan-march-2026
+git pull
+Day1/hello
+
+mkdir build && cd build
+cmake ..
+cmake --build .
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/93ad5bd5-e229-4a6c-acda-2535bf7a8c9f" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5d596b67-4996-446d-8e57-93285fb82b78" />
+
+Build the application in debug mode
+```
+cd ~/conan-march-2026
+cd Day1/hello
+rm -rf build
+mkdir build
+
+cmake -S . -B build/debug -DCMAKE_BUILD_TYPE=Debug
+cmake --build build/debug
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/f2b214a9-45d3-47b5-9c29-cd71b2ad4b6b" />
+
+
+Build the application in release mode
+```
+cd ~/conan-march-2026
+cd Day1/hello
+rm -rf build
+mkdir build
+
+cmake -S . -B build/release -DCMAKE_BUILD_TYPE=Release
+cmake --build build/release
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3bf8e337-32cf-43e9-9938-aa65aabb8d28" />
+
+## Lab - Hello World iwth a static library
+```
+cd ~/conan-march-2026
+git pull
+cd Day1
+
+mkdir -p HelloCppWithStaticLib/{src,lib}
+mkdir -p HelloCppWithStaticLib/lib/{src,inc}
+
+cd HelloCppWithStaticLib
+
+touch CMakeLists.txt
+touch src/main.cpp
+touch lib/src/hello.cpp
+touch lib/inc/hello.h
+
+tree ../HelloCppWithStaticLib
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9b9e2071-2945-4f34-9edc-53ccd80ee5ff" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/851324a7-1b67-4951-aca4-81100e656784" />
+
+Build and Run the application
+```
+cd ~/conan-march-2026
+cd Day1/HelloCppWithStaticLib
+
+cmake -S . -B build/debug -DCMAKE_BUILD_TYPE=Debug
+cmake --build build/debug
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/bdae0df9-27f9-4c09-96ba-8c1519dc2f84" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/72373aaf-d4e3-4eed-91d2-228d628fec3a" />
+
+
+
