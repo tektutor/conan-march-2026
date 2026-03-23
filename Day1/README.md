@@ -61,3 +61,21 @@ Hands-on Lab exercises
 
 ## Info - CMake High Level Architecture
 ![architecture](CMake-HighLevel-Architecture.png)
+
+## Info - Conan Overview
+<pre>
+- Conan is a package manager for C/C++ applications
+- it is opensource tool and cross-platform tool
+- Just like
+  - NPM for NodeJS or Javascript languages
+  - nuget for Visual Studio
+  - pip for Python
+  - Package Managers on the OS level
+    - apt or apt-get, yum, rpm, dnf, etc.,
+- Conan installs third-party packages on a project level
+- Conan also supports transitive dependencies
+  - Your application depends on Library A
+  - Library A depends on B
+  - B in turn depends on C
+ </pre>
+
