@@ -1,0 +1,47 @@
+# --- CMake ---
+build/
+bin/
+lib/
+CMakeUserPresets.json
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# --- Conan ---
+# Ignore the local conan build folder (where dependencies are downloaded/built)
+conan/
+# If you use the CMakeDeps and CMakeToolchain generators, ignore their output
+conan_toolchain.cmake
+conanrun.sh
+conanbuild.conf
+conanbuildenv*
+conanrunenv*
+graph_info.json
+
+# --- Compiled Binaries & Objects ---
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.app
+
+# --- Python (if using conanfile.py) ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- IDEs & Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- User specific / Environment ---
+.env
