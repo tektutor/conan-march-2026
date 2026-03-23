@@ -1,4 +1,4 @@
-# Day 1
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c21a6309-02b2-45ee-aa59-cfd0c4737c9b" /># Day 1
 
 ## Today's agenda
 <pre>
@@ -206,4 +206,38 @@ cmake -S . -B build/release -DCMAKE_BUILD_TYPE=Release
 cmake --build build/release
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3bf8e337-32cf-43e9-9938-aa65aabb8d28" />
+
+## Lab - Hello World iwth a static library
+```
+cd ~/conan-march-2026
+git pull
+cd Day1
+
+mkdir -p HelloCppWithStaticLib/{src,lib}
+mkdir -p HelloCppWithStaticLib/lib/{src,inc}
+
+cd HelloCppWithStaticLib
+
+touch CMakeLists.txt
+touch src/main.cpp
+touch lib/src/hello.cpp
+touch lib/inc/hello.h
+
+tree ../HelloCppWithStaticLib
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9b9e2071-2945-4f34-9edc-53ccd80ee5ff" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/851324a7-1b67-4951-aca4-81100e656784" />
+
+Build and Run the application
+```
+cd ~/conan-march-2026
+cd Day1/HelloCppWithStaticLib
+
+cmake -S . -B build/debug -DCMAKE_BUILD_TYPE=Debug
+cmake --build build/debug
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/bdae0df9-27f9-4c09-96ba-8c1519dc2f84" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/72373aaf-d4e3-4eed-91d2-228d628fec3a" />
+
+
 
