@@ -11,7 +11,7 @@
   - Conan 1.x vs Conan 2.x
   
 - Setup up the environment
-  - Installing  Conan v2.x
+  - Installing Conan v2.x
 
 - CMake High-Level Architecture
 - Conan High-Level Architecture
