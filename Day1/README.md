@@ -59,4 +59,5 @@ Hands-on Lab exercises
 </pre>
 
 
-
+## Info - CMake High Level Architecture
+![architecture](CMake-HighLevel-Architecture.png)
