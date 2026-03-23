@@ -181,3 +181,29 @@ cmake --build .
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/93ad5bd5-e229-4a6c-acda-2535bf7a8c9f" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5d596b67-4996-446d-8e57-93285fb82b78" />
+
+Build the application in debug mode
+```
+cd ~/conan-march-2026
+cd Day1/hello
+rm -rf build
+mkdir build
+
+cmake -S . -B build/debug -DCMAKE_BUILD_TYPE=Debug
+cmake --build build/debug
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/f2b214a9-45d3-47b5-9c29-cd71b2ad4b6b" />
+
+
+Build the application in release mode
+```
+cd ~/conan-march-2026
+cd Day1/hello
+rm -rf build
+mkdir build
+
+cmake -S . -B build/release -DCMAKE_BUILD_TYPE=Release
+cmake --build build/release
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3bf8e337-32cf-43e9-9938-aa65aabb8d28" />
+
