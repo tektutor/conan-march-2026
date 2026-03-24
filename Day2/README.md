@@ -2,7 +2,7 @@
 
 ## Today's Agenda
 <pre>
-- Using Conan Python Recipe
+- Understanding Conan Python Recipe
 - Conanfile.txt vs Python Recipe 
   
 - Hands-on Lab Exercises
