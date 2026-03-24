@@ -1,6 +1,7 @@
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c21a6309-02b2-45ee-aa59-cfd0c4737c9b" /># Day 1
+# Day 1
 
 ## Today's agenda
+
 <pre>
 - CMake Overview
   
