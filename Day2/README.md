@@ -2,6 +2,7 @@
 
 ## Today's Agenda
 <pre>
+- Does Conan support GUI tools?
 - Does Conan support binary package libraries for architectures other than x86_64 ?
 - Understanding Conan Recipe
 - Conanfile.txt vs Python Recipe 
