@@ -201,3 +201,33 @@ Let's understand the above conanfile.txt recipe
   - Using cmake_layout tells Conan to output the generated files into a standard CMake directory structure
     like build/Release or build/Debug, which prevents your root folder from getting cluttered
 </pre>
+
+
+## Lab - Develop a C++ application that depends on dynamic library with CMake
+```
+cd ~/conan-march-2026
+git pull
+cd Day2
+
+mkdir -p HelloCppWithDynamicLib/{src,lib}
+mkdir -p HelloCppWithDynamicLib/lib/{src,inc}
+
+cd HelloCppWithDyanamicLib
+
+touch CMakeLists.txt
+touch src/main.cpp
+touch lib/inc/hello.h
+touch lib/src/hello.cpp
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0ae56ab7-6d82-43c6-abb0-4b4a8fa1bea1" />
+
+
+Build and run
+```
+mkdir build && cd build
+cmake ..
+cmake --build .
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e2e49b39-35b5-4f35-8807-e588ef3acb3e" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/57e31637-0348-4251-9446-3c47729a6270" />
+
