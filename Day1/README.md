@@ -1,6 +1,7 @@
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c21a6309-02b2-45ee-aa59-cfd0c4737c9b" /># Day 1
+# Day 1
 
 ## Today's agenda
+
 <pre>
 - CMake Overview
   
@@ -19,12 +20,6 @@
 Hands-on Lab exercises
 - Develop a C++ application with CMake
 - Develop a C++ application that depends on static library with CMake
-- Develop a C++ application that depends on dynamic library with CMake
-- Develop a simple C++ application that depends on third-party library
-  - We will be using Conan and CMake in this example
-  - Understand how CMake integrates with conan package manager
-  - Understand Conanfile.txt recipe
-  - Supporting Debug and Release Build Types 
 </pre>
 
 ## Info - CMake Overview
@@ -42,14 +37,14 @@ Hands-on Lab exercises
   1. Configuration
      - Reads CMakeLists.txt, builds a dependency graph, caches system variables in CMakeCache.txt
   2. Generation
-     - Produces the native build files for the chosen "Generator"
+     - Produces native build files for the chosen "Generator"
        e.g Makefile, Ninja, Visual Studio Solution file, etc.,
   3. Build
      - Invokes the underlying build tool to compile the source code into binaries
 - Advantages
   - Out of source builds
    - By building in a separate /build directory, the source tree remains clean
-   - no *.o, obj files will not clutter your code as intermediate files and binaries files will be generated in a separate folder
+   - *.o, obj files will not clutter your code as intermediate files and binaries files will be generated in a separate folder
      typically build folder
    - independent of compiler
      - it can switch between GCC, Clang, MSVC without changing  a single line of project code
@@ -65,29 +60,63 @@ Hands-on Lab exercises
 ## Info - Conan Overview
 <pre>
 - Conan is a package manager for C/C++ applications
-- it is opensource tool and cross-platform tool
+- it is opensource tool and cross-platform tool developed by JFrog
 - it uses a conanfile.txt or conafile.py recipe file as the input
 - Just like
   - NPM for NodeJS or Javascript languages
   - nuget for Visual Studio
   - pip for Python
-  - Package Managers on the OS level
-    - apt or apt-get, yum, rpm, dnf, etc.,
+  - System Package Managers 
+    - installs packages on the OS level
+    - apt or apt-get, brew, yum, rpm, dnf, etc.,
 - Conan installs third-party packages on a project level
 - Conan also supports transitive dependencies
   - Your application depends on Library A
   - Library A depends on B
   - B in turn depends on C
+- there is no official, standalone desktop GUI provided by JFrog for the Conan package manager
+- it is designed from the ground up as a command-line interface
+- However, the C++ community has built several third-party graphical tools, and there are excellent 
+  GUI integrations available directly within popular IDEs
+  - examples
+    - Conan Explorer (conan-app-launcher)
+    - Barbarian & Conan-GUI
+    - IDE Integrations
+      - VS Code & CLion
+        - Both editors have dedicated marketplace extensions for Conan
+        - These extensions provide graphical menus to manage your profiles, search for packages, and execute conan install
+        - They integrate cleanly with CMake, automating the generation and linking of your conanfile.txt dependencies so 
+          you don't have to leave the editor
+      - Qt Creator
+        - Features a built-in Conan plugin
+        - Once enabled, it can automatically set up the package manager for use with your CMake build configurations
+    - Server-Side Web UI
+      - JFrog Artifactory Community Edition
+        - If your goal is a GUI to manage remote packages rather than a local client, 
+          Artifactory CE provides a robust Web UI
+        - It is free for C/C++ packages and allows you to browse, manage, and distribute your compiled binaries across your network
  </pre>
+
+## Info - What is the motivation to use Conan while we can install the third-party package using OS Package Managers?
+<pre>
+- OS Package Managers - ( apt, brew, yum, dnf, rpm, etc., )
+    - installs packages on the OS level
+    - we could only have one version of third-party library on the OS level which is made visible for all users on the server
+- If we extract thirdy party binary tar ball manually then on the OS, we need to adjust the respective bashrc script on the user level 
+  each time we work on a project so that the project preferred library path appears first in the environment PATH variable
+- Why OS Package Managers aren't ideal for this? 
+  - in case, we want to use different versions of same third-party library on different projects on the same system it is not possible
+- Conan on the other hand, supports using differnt version of same third-party library on different projects on the same system without a conflict
+</pre>  
 
 ## Info - Why use Conan?
 <pre>
 - Application Binary Interface(ABI) compatibility
-  - It ensures you don't lik a debug library into a application built in Release mode (this could cause application crashes)
+  - It ensures you don't link a debug library into a application built in Release mode (this could cause application crashes)
 - Transitive Dependencies
   - It handles the Graph
     - If Library A depends on B
-    - B depends onC
+    - B depends on C
     - Conan solves the math for you
 - Reproducibility
   - Using lockfiles, you can generate that your CI/CD builds the exact same code as your developer machine
@@ -105,7 +134,7 @@ Hands-on Lab exercises
 - created by Microsoft but now is a cross-platform tool
 - vcpkg is current the one of the most popular choice for C++ developers
 - How it works?
-  - it uses a manifes file called vcpkg.json in your project root
+  - it uses a manifest file called vcpkg.json in your project root
   - when you run CMake, vcpkg automatically downloads and builds those libraries into a local folder
 - Advantagess
   - Huge Library ( 2000+ packages), execellent IDE integration, and manifest mode that ensures everyone on your team
@@ -116,7 +145,7 @@ Hands-on Lab exercises
 
 ## Info - Hunter
 <pre>
-- it is CMake's native dependency management tool
+- it is a CMake's native dependency management tool
 - is unique because it is written entirely in CMake code, hence we don't need to install any other tool to get hunter
 - How it works?
   - You add a few lines to your CMakeLists.txt to gate the project
@@ -136,13 +165,13 @@ Hands-on Lab exercises
 - Conan v1.x
   - Treats dependencies more like a flat list
   - It often struggles with diamond dependencies
-  - where two libraries depend on differnt versions of a third library 
+  - where two libraries depend on different versions of a third library 
   - requires complex workaround to deal with the diamond dependency issue
 - Conan v2.x
   - Built on a rigorous dependency graph model
-  - every version conflict or configuration mismatch is caught during the intial graph resolution, before a single file is downloaded
+  - every version conflict or configuration mismatch is caught during the initial graph resolution, before a single file is downloaded
   - I wouldn't say diamond dependency issue will not happen in Conan v2.x, whenever it encounters such dependency issues, it will let us manually
-    resolve that like how git handles the automatic merge, in case it files a merge conflict which can't be automatically resolved, it will
+    resolve that like how git handles the automatic merge, in case it finds a merge conflict which can't be automatically resolved, it will
     report the issue and let us deal with it manually
 </pre>
 
@@ -238,6 +267,3 @@ cmake --build build/debug
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/bdae0df9-27f9-4c09-96ba-8c1519dc2f84" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/72373aaf-d4e3-4eed-91d2-228d628fec3a" />
-
-
-
