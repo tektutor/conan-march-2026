@@ -231,3 +231,15 @@ cmake --build .
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e2e49b39-35b5-4f35-8807-e588ef3acb3e" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/57e31637-0348-4251-9446-3c47729a6270" />
 
+
+Build in debug mode
+```
+cd ~/conan-march-2026
+git pull
+cd Day2/HelloCppWithDyanamicLib
+
+cmake -S . -B build/debug -DCMAKE_BUILD_TYPE=Debug
+cmake --build build/debug
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0b7c5ff9-ec0b-4fff-89ff-8360f25fe534" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/6319f328-642b-47f3-a110-202cd5e99db1" />
