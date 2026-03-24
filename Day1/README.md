@@ -66,7 +66,7 @@ Hands-on Lab exercises
 ## Info - Conan Overview
 <pre>
 - Conan is a package manager for C/C++ applications
-- it is opensource tool and cross-platform tool
+- it is opensource tool and cross-platform tool developed by JFrog
 - it uses a conanfile.txt or conafile.py recipe file as the input
 - Just like
   - NPM for NodeJS or Javascript languages
@@ -79,6 +79,22 @@ Hands-on Lab exercises
   - Your application depends on Library A
   - Library A depends on B
   - B in turn depends on C
+- there is no official, standalone desktop GUI provided by JFrog for the Conan package manager
+- it is designed from the ground up as a command-line interface
+- However, the C++ community has built several third-party graphical tools, and there are excellent 
+  GUI integrations available directly within popular IDEs
+  - examples
+    - Conan Explorer (conan-app-launcher)
+    - Barbarian & Conan-GUI
+    - IDE Integrations
+      - VS Code & CLion
+        - Both editors have dedicated marketplace extensions for Conan
+        - These extensions provide graphical menus to manage your profiles, search for packages, and execute conan install
+        - They integrate cleanly with CMake, automating the generation and linking of your conanfile.txt dependencies so 
+          you don't have to leave the editor
+      - Qt Creator
+        - Features a built-in Conan plugin
+        - Once enabled, it can automatically set up the package manager for use with your CMake build configurations
  </pre>
 
 ## Info - Why use Conan?
