@@ -66,8 +66,9 @@ Hands-on Lab exercises
   - NPM for NodeJS or Javascript languages
   - nuget for Visual Studio
   - pip for Python
-  - Package Managers on the OS level
-    - apt or apt-get, yum, rpm, dnf, etc.,
+  - System Package Managers 
+    - installs packages on the OS level
+    - apt or apt-get, brew, yum, rpm, dnf, etc.,
 - Conan installs third-party packages on a project level
 - Conan also supports transitive dependencies
   - Your application depends on Library A
@@ -95,6 +96,16 @@ Hands-on Lab exercises
           Artifactory CE provides a robust Web UI
         - It is free for C/C++ packages and allows you to browse, manage, and distribute your compiled binaries across your network
  </pre>
+
+## Info - What is the motivation to use Conan while we can install the third-party package using OS Package Managers?
+<pre>
+- OS Package Managers - ( apt, brew, yum, dnf, rpm, etc., )
+    - installs packages on the OS level
+    - we could only have one version of third-party library on the OS level which is made visible for all users on the server
+- Why OS Package Managers aren't ideal for this? 
+  - in case, we want to use different versions of same third-party library on different projects on the same system it is not possible
+- Conan on the other hand, supports using differnt version of same third-party library on different projects on the same system without a conflict
+</pre>  
 
 ## Info - Why use Conan?
 <pre>
