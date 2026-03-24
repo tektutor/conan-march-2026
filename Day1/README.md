@@ -95,6 +95,11 @@ Hands-on Lab exercises
       - Qt Creator
         - Features a built-in Conan plugin
         - Once enabled, it can automatically set up the package manager for use with your CMake build configurations
+    - Server-Side Web UI
+      - JFrog Artifactory Community Edition
+        - If your goal is a GUI to manage remote packages rather than a local client, 
+          Artifactory CE provides a robust Web UI
+        - It is free for C/C++ packages and allows you to browse, manage, and distribute your compiled binaries across your network
  </pre>
 
 ## Info - Why use Conan?
