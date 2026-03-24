@@ -20,12 +20,6 @@
 Hands-on Lab exercises
 - Develop a C++ application with CMake
 - Develop a C++ application that depends on static library with CMake
-- Develop a C++ application that depends on dynamic library with CMake
-- Develop a simple C++ application that depends on third-party library
-  - We will be using Conan and CMake in this example
-  - Understand how CMake integrates with conan package manager
-  - Understand Conanfile.txt recipe
-  - Supporting Debug and Release Build Types 
 </pre>
 
 ## Info - CMake Overview
