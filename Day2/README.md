@@ -243,3 +243,25 @@ cmake --build build/debug
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0b7c5ff9-ec0b-4fff-89ff-8360f25fe534" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/6319f328-642b-47f3-a110-202cd5e99db1" />
+
+## Lab - Developing a Hello World application that uses Conan Package Manager to manage the fmt library dependency
+```
+cd ~/conan-march-2026
+git pull
+cd Day2/ConanHelloWorld
+
+
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c589dd15-fe54-48f9-8594-072eb26b3384" />
+
+Build and Run your application
+```
+cat main.cpp
+cat CMakeLists.txt
+cat conanfile.txt
+
+conan install . --build=missing -s build_type=Debug -v trace
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e7682c03-93f7-499d-adac-2784bebfc9cb" />
