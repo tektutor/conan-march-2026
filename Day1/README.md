@@ -42,14 +42,14 @@ Hands-on Lab exercises
   1. Configuration
      - Reads CMakeLists.txt, builds a dependency graph, caches system variables in CMakeCache.txt
   2. Generation
-     - Produces the native build files for the chosen "Generator"
+     - Produces native build files for the chosen "Generator"
        e.g Makefile, Ninja, Visual Studio Solution file, etc.,
   3. Build
      - Invokes the underlying build tool to compile the source code into binaries
 - Advantages
   - Out of source builds
    - By building in a separate /build directory, the source tree remains clean
-   - no *.o, obj files will not clutter your code as intermediate files and binaries files will be generated in a separate folder
+   - *.o, obj files will not clutter your code as intermediate files and binaries files will be generated in a separate folder
      typically build folder
    - independent of compiler
      - it can switch between GCC, Clang, MSVC without changing  a single line of project code
