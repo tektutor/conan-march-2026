@@ -3,8 +3,10 @@
 ## Today's Agenda
 <pre>
 - Does Conan support binary package libraries for architectures other than x86_64 ?
-- Understanding Conan Python Recipe
+- Understanding Conan Recipe
 - Conanfile.txt vs Python Recipe 
+- Conan text Recipe
+- Conan Python Recipe
   
 - Hands-on Lab Exercises
   - Develop a C++ application that depends on dynamic library with CMake
