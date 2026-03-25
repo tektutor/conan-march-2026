@@ -18,7 +18,6 @@
   - Using Conan Release Profile
 
 - Undestanding Conan Cache
-- Recommended Folder Layouts
 - Using conan 
   - install
   - build
