@@ -60,7 +60,14 @@ Hands-on Lab exercises
 ## Info - Conan Overview
 <pre>
 - Conan is a package manager for C/C++ applications
-- it is opensource tool and cross-platform tool developed by JFrog
+- Conan C++ package manager was founded in 2015 by Diego Rodriguez-Losada and Luis Martínez de Bartolomé, 
+  widely known in the community as "Laso"
+- The project was born out of their shared desire to solve the long-standing "dependency hell" in the C++ ecosystem
+- Conan was acquired by JFrog in the year 2016, both founders joined the company to continue leading the project's 
+  development while keeping it open-source under the MIT license
+- Sadly, the community lost Luis Martínez de Bartolomé in late 2023
+- Today, Diego Rodriguez-Losada remains a prominent figure and advocate for the project
+- it is an open source tool and cross-platform tool
 - it uses a conanfile.txt or conafile.py recipe file as the input
 - Just like
   - NPM for NodeJS or Javascript languages
@@ -223,7 +230,6 @@ cmake --build build/debug
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/f2b214a9-45d3-47b5-9c29-cd71b2ad4b6b" />
 
-
 Build the application in release mode
 ```
 cd ~/conan-march-2026
@@ -236,7 +242,7 @@ cmake --build build/release
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3bf8e337-32cf-43e9-9938-aa65aabb8d28" />
 
-## Lab - Hello World iwth a static library
+## Lab - Hello World with a static library
 ```
 cd ~/conan-march-2026
 git pull
