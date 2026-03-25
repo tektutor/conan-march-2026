@@ -15,21 +15,7 @@
     - We will be using Conan and CMake in this example
     - Understand how CMake integrates with conan package manager
     - Understand Conanfile.txt recipe
-    - Supporting Debug and Release Build Types
-  
-- Understanding Conan Virtual Environments
-- Conan Transitive Dependency
-- Conan Profiles
-  - Overview
-  - Debug Profile
-  - Release Profile
-- Hands-on Exercises
-  - Managing C++ application dependency with a Python recipe with Conan & CMake
-  - Using Conan Virtual Environments
-  - Managing Transitive dependency with Conan & CMake
-  - Using Conan Default Profile
-  - Using Conan Debug Profile
-  - Using Conan Release Profile
+    - Supporting Debug and Release Build Types  
 </pre>
 
 
