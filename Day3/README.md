@@ -2,6 +2,21 @@
 
 ## Today's Agenda
 <pre>
+- Understanding Conan Virtual Environments
+- Conan Transitive Dependency
+- Conan Profiles
+  - Overview
+  - Debug Profile
+  - Release Profile
+  
+- Hands-on Exercises
+  - Managing C++ application dependency with a Python recipe with Conan & CMake
+  - Using Conan Virtual Environments
+  - Managing Transitive dependency with Conan & CMake
+  - Using Conan Default Profile
+  - Using Conan Debug Profile
+  - Using Conan Release Profile
+
 - Undestanding Conan Cache
 - Recommended Folder Layouts
 - Using conan 
@@ -10,6 +25,7 @@
   - create
   - export and
   - upload
+  
 - Hands-on Lab exercises
   - Fetch a pre-compiled package from ConanCenter and generate build files for it
     - Understand conan install
