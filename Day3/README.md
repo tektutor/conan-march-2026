@@ -36,5 +36,5 @@
   - Build the package from scratch inside the Local Cache so other projects on your machine can use it
     - Understand conan create
   - Distributing package to JFrog Artifactory 
-    - Understnad conan upload
+    - Understand conan upload
 </pre>
