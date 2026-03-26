@@ -239,8 +239,8 @@ Let's understand the conanfile.py recipe
 ## Lab - Conan Transitive Dependency
 Note
 <pre>
-- In this exercise, the main application and lib application are independent project projects
-- The lib folder is present as a sub-folder but otherwise they are totally independent projects
+- In this exercise, the main application and lib application are independent projects
+- The lib folder is just present as a sub-folder but otherwise they are totally independent projects
 - Hence, the lib project has its own conan recipe file and its own CMakeLists.txt
 - On the similar note, the main project has its own conan recipe file and a separe CMakeLists.txt
 - The lib project is a static library that depends on fmt third-party library
