@@ -82,16 +82,55 @@ conan upload "hello_lib/1.0:*" -r my_gitea -c
 
 ## Info - Versioning and Package ID Management
 ```
-- In Conan, Semantic Versioning (SemVer) is the standard language used to communicate compatibility
-  between packages
-- It follows the classic Major.Minor.Patch format (e.g., 1.2.3), but Conan adds powerful logic on
-  top to handle version ranges and conflict resolution in complex C++ dependency graphs
-- In your conanfile.txt or conanfile.py, you don't always have to hardcode a specific version
-- Conan allows Version Ranges, which let your project automatically pick the best available version
-  within a safe boundary
-- [>1.0 <2.0] - Anything greater than 1.0 but less than 2.0
-- ~1.2 is equivalent to [>=1.2 <1.3], it allows patch updates only
-- ^1.2.3 is equivalent to [>=1.2.3 <2.0.0], it allows minor and patch updates
-- When using ranges, Conan will always resolve to the latest version that fits the range in your
-  remote or local cache
+- Semantic versioning in Conan
+  - In Conan, Semantic Versioning (SemVer) is the standard language used to communicate compatibility
+    between packages
+  - It follows the classic Major.Minor.Patch format (e.g., 1.2.3), but Conan adds powerful logic on
+    top to handle version ranges and conflict resolution in complex C++ dependency graphs
+
+- Version ranges and constraints
+  - In your conanfile.txt or conanfile.py, you don't always have to hardcode a specific version
+  - Conan allows Version Ranges, which let your project automatically pick the best available version
+    within a safe boundary
+  - [>1.0 <2.0] - Anything greater than 1.0 but less than 2.0
+  - ~1.2 is equivalent to [>=1.2 <1.3], it allows patch updates only
+  - ^1.2.3 is equivalent to [>=1.2.3 <2.0.0], it allows minor and patch updates
+  - When using ranges, Conan will always resolve to the latest version that fits the range in your
+    remote or local cache
+
+- Package ID modes and revisions
+  - The Package ID (The Binary Fingerprint)
+    - The Package ID is a SHA-1 hash that represents a specific binary configuration
+    - Even if the version is the same (fmt/11.0.2), you might have one Package ID for
+      Windows/MSVC and another for Linux/GCC
+    - Conan calculates this ID based on
+      - Settings
+        - OS
+        - Compiler
+        - Build Type
+        - Architecture.
+      - Options
+        - Shared vs. Static
+        - Header-only
+      - Requirements
+        - The versions of the libraries it links against
+
+- Package ID Modes (Binary Compatibility)
+  - This is where it gets interesting
+  - If Library A depends on Library B, what happens if Library B moves from version 1.0.0 to 1.0.1?
+  - Does Library A need a brand-new binary (a new Package ID), or can it reuse the old one?
+  - Package ID Modes define this "Binary Compatibility" policy
+  - Here are the most common ones
+    - minor_mode(default)
+      - A change in the Minor version of a dependency triggers a new Package ID
+      - If fmt goes 11.0 -> 11.1, your app must be rebuilt
+    - patch_mode
+      - Even a Patch change in a dependency triggers a new Package ID
+      - Very strict; ensures maximum safety but causes more rebuilds
+    - major_mode
+      - Only a Major version change triggers a new Package ID
+      - Assumes the library is binary-compatible across minor updates
+    - full_version_mode
+      - Any change at all (even a revision) triggers a new Package ID
+      - The most paranoid setting; used for safety-critical systems
 ```
