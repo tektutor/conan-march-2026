@@ -388,6 +388,46 @@ build/Release/myQtApp
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5fa02c68-cfc4-4261-914e-af2a348762ae" />
 
 
+## Lab - Conan export
+<pre>
+- What does it actually does When you run conan export ?
+  - Conan performs two main tasks
+    1. Copies the conanfile.py
+	   - It takes your recipe and stores it in the local cache (usually ~/.conan2/p/...)
+    2. Captures the "Recipe"
+	   - It creates a unique reference for your package (e.g., hello/1.0@user/stable)
+  - It does not compile any code
+  - It only exports the instructions and any source files required to build the package later
+- Why would you use it?
+  - You use conan export when you want to make your library available to other projects on 
+	your machine without fully building it yet
+	
+  - Source-only Packages
+	- If you have a header-only library, exporting it is often all you need to do 
+	  for others to use it
+	
+  - Testing Recipes
+	- If you are debugging a complex conanfile.py, you might export it frequently to ensure Conan can parse the recipe and handle its metadata correctly.
+	- Development of a Library
+	  - If you are writing "Library A" and want "Project B" to be able to find it, 
+	    you export "Library A" so it becomes a valid reference in your cache
+</pre>
+
+```
+cd ~/conan-march-2026
+git pull
+cd Day3/qt-widget-application
+ls -l
+cat conanfile.py
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c1aac44e-e3c7-4872-b8d0-31f701b99fb2" />
+
+Let's export now
+```
+conan export .
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9444c334-2b5d-466b-b835-5b783365625c" />
+
 ## Info - Conan Profile
 Understanding Conan Profiles
 ```
