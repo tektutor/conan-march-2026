@@ -477,3 +477,20 @@ Find the path of the default profile
 ```
 conan profile path default
 ```
+
+## Lab - Using Conan profile
+
+Let's list the conan profiles
+```
+conan profile list
+```
+
+Let's build the application using conan debug profile. In the command below h indicate host or b indicates build.  The host is the machine where the application will be executed and build is the machine where the application will be compiled.
+```
+conan install . -pr:h=debug_gcc14 -pr:b=default --build=missing
+conan install . -pr:h=release_gcc14 -pr:b=default --build=missing
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/754a79c6-8427-42f7-9080-e103dc356fde" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/364bde8f-7496-4b45-b72e-b84076d0fe77" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2edda26e-7c38-4600-8f24-7474fd390064" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ca812a5a-d2c9-46d5-8a22-ba0bb5d6ea35" />
