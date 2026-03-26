@@ -26,6 +26,7 @@
   - create
   - export and
   - upload
+  - list
   
 - Hands-on Lab exercises
   - Fetch a pre-compiled package from ConanCenter and generate build files for it
