@@ -232,6 +232,6 @@ Let's understand the conanfile.py recipe
 
   - this file can be located under build/{Debug,Release}/generators/conanrun.sh
 
-- Why use it
+- Why use it ?
   - To prevent "Library not found" errors when you try to launch your compiled application	
 </pre>
