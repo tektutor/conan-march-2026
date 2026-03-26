@@ -242,9 +242,9 @@ Note
 - In this exercise, the main application and lib application are independent projects
 - The lib folder is just present as a sub-folder but otherwise they are totally independent projects
 - Hence, the lib project has its own conan recipe file and its own CMakeLists.txt
-- On the similar note, the main project has its own conan recipe file and a separe CMakeLists.txt
+- On the similar note, the main project has its own conan recipe file and a separate CMakeLists.txt
 - The lib project is a static library that depends on fmt third-party library
-- The main applicaiton depends on the static library(lib project)
+- The main application depends on the static library(lib project)
 </pre>
 
 <pre>
