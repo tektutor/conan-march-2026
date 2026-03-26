@@ -65,5 +65,16 @@ conan remote add my_gitea http://localhost:3000/api/packages/jegan/conan
 
 conan remote login my_gitea jegan -p Root@123
 
+cd lib
+conan install . --build=missing
+cmake --preset conan-release
+cmake --build --preset conan-release
+conan create . --build=missing
+
+cd ..
+conan install . --build=missing
+cmake --preset conan-release
+cmake --build --preset conan-release
+
 conan upload "hello_lib/1.0:*" -r my_gitea -c
 ```
