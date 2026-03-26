@@ -116,26 +116,8 @@ Let's understand the conanfile.py recipe
     - Example
 	  options = {"shared": [True, False], "fPIC": [True, False]}
       default_options = {"shared": False, "fPIC": True}
-  - fPIC (Position Independent Code) is necessary for static libraries that might be linked into 
-	sharedVirtualBuildEnv (The Build Context)
-
-    Purpose: Provides tools needed to compile your code.
-
-    Trigger: Generated when you have tool_requires (e.g., cmake/3.25.0, ninja/1.11.0).
-
-    Files Generated: conanbuildenv-release-x86_64.sh and a wrapper conanbuild.sh.
-
-    Usage: Sourcing this makes tools like cmake available in your path even if they aren't installed on your system.
-
-VirtualRunEnv (The Host/Run Context)
-
-    Purpose: Provides what is needed to execute your compiled program.
-
-    Trigger: Automatically generated for regular requires.
-
-    Files Generated: conanrunenv-release-x86_64.sh and a wrapper conanrun.sh.
-
-    Logic: It automatically adds the bin folders of your dependencies to PATH and lib folders to LD_LIBRARY_PATH. libraries later, mostly relevant on Linux/macOS
+  - fPIC (Position Independent Code) is necessary for static libraries that 
+	might be linked into sharedVirtualBuildEnv
 
 - Lifecycle Methods
   - Conan executes specific methods in a strict order to build and package your library
@@ -206,33 +188,50 @@ VirtualRunEnv (The Host/Run Context)
         self.cpp_info.libs = ["mylibrary"]
 </pre>
 
-## Info - Understanding Conan Virtual Environments
+## Info - Conan Virtual Environment
 <pre>
-- In Conan 2.x, "Virtual Environments" are the mechanism used to inject the environment variables 
-  like PATH, LD_LIBRARY_PATH, or custom flags required to either build a project or run an executable
+- In the C++ world, a Conan Virtual Environment is a mechanism used to manage the tools and environment variables 
+  required to build and run your projects without cluttering your system globally
 
-- Unlike Python's venv, which creates a physical directory of binaries, Conan's virtual environments 
-  are script-based
+- Think of it as the C++ equivalent of Python’s venv
 	
-- They generate shell scripts (.sh, .bat, or .ps1) that modify your current terminal session to "see" the 
-  dependencies located in the Conan cache
+- It ensures that when you need a specific version of CMake, a compiler, or a shared library, 
+  they are "in your path" only when you are working on that specific project
+
+- There are 2 types of Virtual Environment
+  1. Build environment (VirtualBuildEnv) and
+  2. Run environment (VirtualRunEnv)
+</pre>
+
+## Info - VirtualBuildEnv - Build environment
+<pre>
+- This manages the tools you required to build your application
 	
-- Conan separates the environment into two distinct "contexts" to avoid polluting your runtime with 
-  build-only tools like CMake or a cross-compiler
+- What it includes ?
+  - Paths to compilers (GCC, Clang), build tools (CMake, Ninja, Meson), 
+	and code generators (Protobuf, Flex/Bison)
 
-- There are 2 virtual environments in Conan 
-  1. Build Context
-  2. Host/Run Context
+  - Conan generates a file named conanbuild.sh for Linux/macOS or conanbuild.bat/ps1 for Windows
+	
+  - this file can be located under build/{Debug,Release}/generators/conanbuild.sh
 
-- VirtualBuildEnv (The Build Context)
-  - Purpose - Provides tools needed to compile your code
-  - Trigger - Generated when you have tool_requires (e.g., cmake/3.25.0, ninja/1.11.0)
-  - Files Generated - conanbuildenv-release-x86_64.sh and a wrapper conanbuild.sh
-  - Usage - Sourcing this makes tools like cmake available in your path even if they aren't installed on your system
+- Why use it ?
+  - So you can use cmake or ninja directly in your terminal, knowing it's the exact version specified in your conanfile
+</pre>
 
-- VirtualRunEnv (The Host/Run Context)
-  - Purpose - Provides what is needed to execute your compiled program
-  - Trigger - Automatically generated for regular requires
-  - Files Generated - conanrunenv-release-x86_64.sh and a wrapper conanrun.sh
-  - Logic - It automatically adds the bin folders of your dependencies to PATH and lib folders to LD_LIBRARY_PATH
+## Info - VirtualRunEnv - Run environment
+<pre>
+- This manages what you need to run your application binary after it’s built
+	
+- What it includes?
+  - Paths to shared libraries (.so, .dll, .dylib) and runtime executables
+	
+  - It sets variables like PATH, LD_LIBRARY_PATH, and DYLD_LIBRARY_PATH
+	
+  - Conan generates a file named conanrun.sh for Linux/MacOS or conanrun.bat/ps1 for Windows
+
+  - this file can be located under build/{Debug,Release}/generators/conanbuild.sh
+
+- Why use it
+  - To prevent "Library not found" errors when you try to launch your compiled application	
 </pre>
