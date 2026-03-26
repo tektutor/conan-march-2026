@@ -363,3 +363,46 @@ build/Release/myQtApp
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3a797854-9718-48bb-a183-b0a53a261a03" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3e03ca97-c74a-4bac-aec5-dc6b82fe0693" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8ad516b3-8d87-4440-88a3-9d7149053677" />
+
+## Info - Conan Profile
+Understanding Conan Profiles
+```
+- A Conan Profile is essentially a configuration file that describes the environment
+  where your code will be built or where it will eventually run
+
+- Instead of typing long command-line arguments every time you want to install a library,
+  you pack those settings into a profile.
+
+- In modern Conan (2.0+), the system uses a two-profile approach:
+  - Build Profile
+    - Defines the machine doing the compiling (usually your laptop or a CI server)
+  - Host Profile
+    - Defines the machine where the compiled binary will actually execute
+```
+
+## Lab - Conan Profiles
+
+Listing Conan profiles
+```
+conan profile list
+```
+
+Creating a Conan default profile
+```
+conan profile detect --force
+```
+
+View the default profile details
+```
+conan profile show -pr=default
+```
+
+Creates default profile if missing
+```
+conan profile detect
+```
+
+Find the path of the default profile
+```
+conan profile path default
+```
