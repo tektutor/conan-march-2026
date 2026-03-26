@@ -230,7 +230,7 @@ Let's understand the conanfile.py recipe
 	
   - Conan generates a file named conanrun.sh for Linux/MacOS or conanrun.bat/ps1 for Windows
 
-  - this file can be located under build/{Debug,Release}/generators/conanbuild.sh
+  - this file can be located under build/{Debug,Release}/generators/conanrun.sh
 
 - Why use it
   - To prevent "Library not found" errors when you try to launch your compiled application	
