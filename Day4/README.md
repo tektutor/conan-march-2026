@@ -43,4 +43,27 @@ conan graph info . --format=html > graph.html
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5ec32c21-1c6c-4248-84fb-150095853c50" />
 
 
+## Lab - Uploading your custom conan package to Remote Conan Repository
+```
+cd ~/conan-march-2026
+git pull
+cd Day4/simple-cpp-app
+tree
 
+podman volume create gitea-data
+
+podman run -d --name gitea \  
+  -p 3000:3000 \
+  -v gitea-data:/data:Z \
+  gitea/gitea:latest
+
+podman ps
+
+podman logs gitea
+
+conan remote add my_gitea http://localhost:3000/api/packages/jegan/conan
+
+conan remote login my_gitea jegan -p Root@123
+
+conan upload "hello_lib/1.0:*" -r my_gitea -c
+```
