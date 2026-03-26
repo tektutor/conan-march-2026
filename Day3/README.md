@@ -221,7 +221,7 @@ Let's understand the conanfile.py recipe
 
 ## Info - VirtualRunEnv - Run environment
 <pre>
-- This manages what you need to run your application binary after it’s built
+- This manages the tools you need to run your application binary after it’s built
 	
 - What it includes?
   - Paths to shared libraries (.so, .dll, .dylib) and runtime executables
