@@ -1,0 +1,24 @@
+from conan import ConanFile
+from conan.tools.cmake import CMake, cmake_layout
+
+class LoggerRecipe(ConanFile):
+    name = "logger"
+    version = "2.0"
+    settings = "os", "compiler", "build_type", "arch"
+    generators = "CMakeToolchain"
+    exports_sources = "CMakeLists.txt", "src/*", "inc/*"
+
+    def layout(self):
+        cmake_layout(self)
+
+    def build(self):
+        cmake = CMake(self)
+        cmake.configure()
+        cmake.build()
+
+    def package(self):
+        cmake = CMake(self)
+        cmake.install()
+
+    def package_info(self):
+        self.cpp_info.libs = ["logger"]
