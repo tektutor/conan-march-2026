@@ -336,7 +336,30 @@ cat main.cpp
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/49768258-ea20-4b27-8026-49f1bdb7db83" />
 
 
-Build and Run the application
+Build and Run the application ( the interesting thing is I haven't installed Qt 6.x on my RHEL 10, CMake did the Qt installation for me
 ```
+# Option 1 - You could install dependency this way 
+conan install . --build=missing -c tools.system.package_manager:mode=install -c tools.system.package_manager:sudo=True
 
+# Option 2 - You could also install dependency this way
+conan install . --build=missing
+
+## Option 1 - You could build the application this way
+cmake -S . -B build/Release -DCMAKE_TOOLCHAIN_FILE=build/Release/generators/conan_toolchain.cmake  -DCMAKE_BUILD_TYPE=Release
+
+# Option 2 - You could build the application this way
+cmake --build build/Release
+
+# Option 3 - You could also build the applicaiton this way
+cmake --build --preset conan-release
+
+# Here we are using the Conan virtual environment to run the Qt Widgets application
+source build/Release/generators/conanrun.sh
+
+# Run the Qt Widget application
+build/Release/myQtApp
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/656d3af7-23d6-461d-a07c-3799032a31f6" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3a797854-9718-48bb-a183-b0a53a261a03" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3e03ca97-c74a-4bac-aec5-dc6b82fe0693" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8ad516b3-8d87-4440-88a3-9d7149053677" />
