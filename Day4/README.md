@@ -2,6 +2,8 @@
 
 ## Today's Agenda
 <pre>
+- Finding the application dependencies
+  
 - Remote Repositories and Uploading
   - Default remotes: ConanCenter, Artifactory, custom
   - Adding/removing remotes
@@ -21,3 +23,4 @@
  - Custom settings, options, environment variables
  - Hands-on Lab
 </pre>
+
