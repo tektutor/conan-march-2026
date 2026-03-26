@@ -262,6 +262,9 @@ cat CMakeLists.txt
 cat conanfile.py
 cat cat/main.cpp
 </pre>
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/48aeed69-3340-4007-bbde-0fefb18d6494" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/6ee69de3-e5ad-486f-8829-dc8aa5b3aec9" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/147a442c-e14c-4307-b2d1-9287969a337a" />
 
 Let's build the static library project
 ```
