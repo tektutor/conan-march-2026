@@ -315,3 +315,28 @@ cmake --build --preset conan-release
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3a4d8040-1efd-4791-bfb0-9a0ec3d0c2ae" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/23dfeb5e-d4c6-46ab-81c2-f1e6363dd4d3" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7b4ce546-6fe7-453e-8ced-5e6ef0274c32" />
+
+## Lab - C++ Qt Widgets Application using CMake and Conan
+```
+cd ~/conan-march-2026
+git pull
+cd Day3/qt-widget-application
+ls -l
+cat CMakeLists.txt
+cat conanfile.py
+cat MyDlg.h
+cat MyDlg.cpp
+cat main.cpp
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5c73b76f-8e7f-41a8-a8fc-e9ed1b00b592" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a7302d32-07ca-444e-b005-b4549d93e33a" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/88f8243c-4582-48d1-b694-4bc10ca88b09" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/bc87d643-75f2-4f0d-9cf5-99d6de381970" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/4f13d745-1c16-4bdd-9d43-fbd02675acf1" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/49768258-ea20-4b27-8026-49f1bdb7db83" />
+
+
+Build and Run the application
+```
+
+```
