@@ -364,6 +364,30 @@ build/Release/myQtApp
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3e03ca97-c74a-4bac-aec5-dc6b82fe0693" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8ad516b3-8d87-4440-88a3-9d7149053677" />
 
+## Lab - Using conan build command
+If you have conan python recipe with build method defined, you could use the conan to build your application 
+```
+cd ~/conan-march-2026
+git pull
+cd Day3/qt-widget-application
+ls -l
+cat conanfile.py
+
+conan build .
+
+# Use the Conan virtual environment to the export the required tools path and environment variables before running your application
+source build/Release/generators/conanrun.sh
+
+# Run your application
+build/Release/myQtApp
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/4dea6642-bf9e-42e9-b989-f39a385b8120" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0378de91-6a12-4dc1-9894-56cf2ed15779" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-source build/conanrun.shattachments/assets/0394dffd-0503-450b-9a99-6a93b46d3d69" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/fd01f19c-a3b1-4c40-9d9a-13c6bb4256d5" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5fa02c68-cfc4-4261-914e-af2a348762ae" />
+
+
 ## Info - Conan Profile
 Understanding Conan Profiles
 ```
