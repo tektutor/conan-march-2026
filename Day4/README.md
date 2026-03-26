@@ -82,13 +82,16 @@ conan upload "hello_lib/1.0:*" -r my_gitea -c
 
 ## Info - Versioning and Package ID Management
 ```
-- In Conan, Semantic Versioning (SemVer) is the standard language used to communicate compatibility between packages
-- It follows the classic Major.Minor.Patch format (e.g., 1.2.3), but Conan adds powerful logic on top to handle version
-  ranges and conflict resolution in complex C++ dependency graphs
+- In Conan, Semantic Versioning (SemVer) is the standard language used to communicate compatibility
+  between packages
+- It follows the classic Major.Minor.Patch format (e.g., 1.2.3), but Conan adds powerful logic on
+  top to handle version ranges and conflict resolution in complex C++ dependency graphs
 - In your conanfile.txt or conanfile.py, you don't always have to hardcode a specific version
-- Conan allows Version Ranges, which let your project automatically pick the best available version within a safe boundary
+- Conan allows Version Ranges, which let your project automatically pick the best available version
+  within a safe boundary
 - [>1.0 <2.0] - Anything greater than 1.0 but less than 2.0
 - ~1.2 is equivalent to [>=1.2 <1.3], it allows patch updates only
 - ^1.2.3 is equivalent to [>=1.2.3 <2.0.0], it allows minor and patch updates
-- When using ranges, Conan will always resolve to the latest version that fits the range in your remote or local cache
+- When using ranges, Conan will always resolve to the latest version that fits the range in your
+  remote or local cache
 ```
