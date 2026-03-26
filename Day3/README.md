@@ -29,15 +29,15 @@
   
 - Hands-on Lab exercises
   - Fetch a pre-compiled package from ConanCenter and generate build files for it
-    - Understand conan install
-  - Creating a simple custom package template using Conan
-    - Understand conan 
+    - Understand conan install 
   - Take a local Python recipe and save it into the Local Cache without actually building the C++ code
-    - Understand conan exports practically
+    - Understand conan export
   - Build the package from scratch inside the Local Cache so other projects on your machine can use it
     - Understand conan create
   - Distributing package to JFrog Artifactory 
     - Understand conan upload
+  - Listing all packages in your local Conan Cache
+	- Understand conan list
 </pre>
 
 ## Info - Understanding Python recipe file
@@ -427,6 +427,13 @@ Let's export now
 conan export .
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9444c334-2b5d-466b-b835-5b783365625c" />
+
+## Lab - Conan list
+```
+cd ~
+conan list
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1b93796b-a4d5-44ce-87dc-8ba9144573fa" />
 
 ## Info - Conan Profile
 Understanding Conan Profiles
