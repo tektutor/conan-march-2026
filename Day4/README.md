@@ -79,7 +79,6 @@ cmake --build --preset conan-release
 conan upload "hello_lib/1.0:*" -r my_gitea -c
 ```
 
-
 ## Info - Versioning and Package ID Management
 ```
 - Semantic versioning in Conan
@@ -133,4 +132,12 @@ conan upload "hello_lib/1.0:*" -r my_gitea -c
     - full_version_mode
       - Any change at all (even a revision) triggers a new Package ID
       - The most paranoid setting; used for safety-critical systems
+
+- Lockfiles and reproducible builds
+  - In the world of C++, a reproducible build is the "Holy Grail."
+  - It means that if you build your project today, and your teammate builds it six months from now
+    on a different machine, you both get the exact same binary output
+  - In Conan, Lockfiles are the specialized tools that make this possible
+  - Without them, even a small change in a remote repository (like a new patch version of fmt) could
+    silently change your build
 ```
