@@ -203,7 +203,7 @@ Let's understand the conanfile.py recipe
   2. Run environment (VirtualRunEnv)
 </pre>
 
-#### Info - VirtualBuildEnv - Build environment
+##### Info - VirtualBuildEnv - Build environment
 <pre>
 - This manages the tools you required to build your application
 	
@@ -219,7 +219,7 @@ Let's understand the conanfile.py recipe
   - So you can use cmake or ninja directly in your terminal, knowing it's the exact version specified in your conanfile
 </pre>
 
-#### Info - VirtualRunEnv - Run environment
+##### Info - VirtualRunEnv - Run environment
 <pre>
 - This manages the tools you need to run your application binary after it’s built
 	
