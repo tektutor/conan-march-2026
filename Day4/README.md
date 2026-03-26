@@ -22,5 +22,7 @@
  - Cross-compilation with profiles
  - Custom settings, options, environment variables
  - Hands-on Lab
+
+- Diamond Dependency Conflict Resolution
 </pre>
 
