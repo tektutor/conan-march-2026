@@ -55,5 +55,9 @@ conan install . --lockfile=conan.lock
 ```
 
 #This refreshes the lockfile with the latest available revisions
+
 conan lock create . --update
 ```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/598d21c1-3af8-4318-bce3-6c0e2f246aeb" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/f5aff7bd-2c7e-4ac3-90e6-321f94035bae" />
