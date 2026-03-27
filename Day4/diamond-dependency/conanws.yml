@@ -1,0 +1,6 @@
+packages:
+  - path: logger/v1
+  - path: logger/v2
+  - path: libA
+  - path: libB
+  - path: .
