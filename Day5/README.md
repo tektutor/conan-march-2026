@@ -107,3 +107,25 @@ Click "Save and Finish"
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1afb111b-d072-4eaa-865b-5596629178c0" />
 Click "Start using Jenkins"
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/781d7a3b-c95c-4e84-b9cb-f8ccc13d6efa" />
+
+
+Let's create a Jenkins CI Job
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7d11d2fe-cfd5-471a-8c3f-15935edbe232" />
+Select "Freestyle"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/df7fcfdc-22c8-4c34-be71-b0f5c96738ba" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/96e1949e-0fe3-43bd-a1fa-2cd09988ec90" />
+General section
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9f794f0a-008b-4736-8d16-0b08fbce043a" />
+Source Code Management
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8e326bbb-88f8-4245-acae-a9922903a4bd" />
+Triggers Section
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9e2be9a6-5fb0-4193-90cd-ab3a12cb3922" />
+Build Steps --> Select "Execute Shells"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d57f5f27-511e-476c-9782-cc314a37279c" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/4c82ba3c-d0a5-46ad-9621-4bbc3ca97fc7" />
+Click "Save"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2a75821e-7607-46d0-adba-032ed8ef15ac" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/02437871-4c7c-48e8-80c6-6788d4fa1713" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3d9e8349-fe64-4fa5-9d8f-3d9e080e0326" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8b1a9ba2-47f7-4d1a-b2ff-be605d6350eb" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/496a011b-cbef-4c21-8d08-75a69a1ca7b8" />
