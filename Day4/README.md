@@ -171,4 +171,25 @@ conan install . --build=missing
 cmake --preset conan-release
 cmake --build --preset conan-release
 conan create . --build=missing
+
+# Build libA 1.0
+cd ../../libA
+conan install . --build=missing
+cmake --preset conan-release
+cmake --build --preset conan-release
+conan create . --build=missing
+
+# Build libA 1.0
+cd ../libB
+conan install . --build=missing
+cmake --preset conan-release
+cmake --build --preset conan-release
+conan create . --build=missing
+
+# Build and run the main application
+cd ..
+conan install . --build=missing
+cmake --preset conan-release
+cmake --build --preset conan-release
+buid/Release/app
 ```
