@@ -2,7 +2,7 @@
 
 ## Today's Agenda
 <pre>
-- Understanding Conan Workflow
+- Understanding Conan Workspace
 - Hands-on Lab
 
 - Lockfile
@@ -17,6 +17,23 @@
   - Clean cache and resolve conflicts
   - Dependency pinning strategies
 </pre>
+
+## Lab - Conan workspace
+```
+cd ~/conan-march-2026
+git pull
+cd Day5/conan-workspace
+tree
+cat conanws.yml
+cat build.sh
+./build.sh
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/4d076b20-916a-477d-9ee9-9e21cad3f684" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d78fc194-1b1a-4f13-b9fc-5881b6e19615" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5a76aa91-b233-451a-8683-6bd696d9f28f" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/76374f2e-ff83-4646-aded-f5a68e8dcb77" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/30e37084-aa55-4347-993c-73ac2f0512eb" />
+
 
 ## Info - Conan Best Practices and Troubleshooting
 
