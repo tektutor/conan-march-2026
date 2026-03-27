@@ -10,7 +10,7 @@
   
 - Integrating Conan in CI/CD Pipelines
   - Using Conan in Jenkins
-  - Automating builds and tests with Conan
+  - Automating CI/CD with Conan, CMake & Jenkins
   - Hands-on Lab
     
 - Best Practices and Troubleshooting
