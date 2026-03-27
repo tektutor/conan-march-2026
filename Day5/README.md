@@ -78,3 +78,32 @@ conan lock create . --update
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/eb7d384e-b724-47b6-956c-072afb6140a4" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7b95bfc8-c414-400f-9dd7-69953593db53" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5f89ff9e-d903-47cf-a3ab-39dc38e709fe" />
+
+## Lab - Setup Jenkins Continuous Integration Build Server
+You could download Jenkins war file from official page https://www.jenkins.io/download/
+
+```
+cd ~/Downloads
+# Launch Jenkins
+java -jar ./jenkins.war
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b7a334e3-1dd4-4491-988b-1a725a604b35" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2e7a5ad4-805c-4473-aa68-3fe59ab3d22b" />
+Access your Jenkins dashboard from your preferred web browser http://localhost:8080
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ab9cc687-8eb7-4f73-8424-b00d24d0b25c" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d49dd089-9da0-4b8a-81a2-0830c38136ba" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b9313ce3-e32c-4c77-a56c-2c2769d7df55" />
+Let's select the "Install Suggested Plugins"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/895062db-dded-4e99-9b80-947423756458" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/fcb01e0f-ae3d-4d6d-9edb-75b6bc27bfe1" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9d467877-f460-4756-b995-b80865f0700a" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/016430c7-fd1e-41a6-a857-3e7d86820780" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/103b1524-b0b0-4f21-96b0-9e0560caedeb" />
+Let's create an admin user
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ce8d0377-a6e4-49ec-a0ca-46d1a8efa4db" />
+Click "Save and Continue"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2ab285e6-2bb1-4cc4-a0fa-45a48a2c9bdf" />
+Click "Save and Finish"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1afb111b-d072-4eaa-865b-5596629178c0" />
+Click "Start using Jenkins"
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/781d7a3b-c95c-4e84-b9cb-f8ccc13d6efa" />
