@@ -52,10 +52,8 @@ cat conan.lock
 
 # Use the lockfile to install dependencies
 conan install . --lockfile=conan.lock
-```
 
 #This refreshes the lockfile with the latest available revisions
-
 conan lock create . --update
 ```
 
